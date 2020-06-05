@@ -1,0 +1,197 @@
+@font-face {
+    font-family: OpenSans;
+    src: url(../fonts/OpenSans-Regular.ttf);
+    font-weight: 400;
+    font-style: normal;
+  }
+  @font-face {
+    font-family: OpenSans;
+    src: url(../fonts/OpenSans-Bold.ttf);
+    font-weight: 700;
+    font-style: normal;
+  }
+.header {
+  background-image: url("../images/football_767.jpg");
+  background-repeat: no-repeat;
+  background-position: center center;
+  background-size: cover;
+  background-color: #000000;
+  position: relative;
+  padding-bottom: 5.25rem;
+  padding-top: 2rem;
+  padding-left: 1.25rem;
+  padding-right: 1.25rem;
+  height: 100vh;
+  width: calc(100%-1.25rem);
+
+}
+.header::after {
+    content: "";
+    background-color: #0a0e34;
+    opacity: 0.9;
+    position: absolute;
+    top: 0;
+    left: 0;
+    bottom: 0;
+    right: 0;  
+  }
+.header_logo {
+    margin-left: auto;
+    margin-right: auto;
+    position: relative;
+    z-index: 1;
+    width: 8.3rem;
+    margin-bottom: 8.5rem;
+}
+.logo_svg {
+    fill: #ffffff;
+}
+
+.title {
+    font-family: OpenSans, Arial, sans-serif;
+    font-weight: 700;
+    color: #ffffff;
+    text-transform: uppercase;
+    font-size: 1.75rem;
+    line-height: 2.125rem;
+    position: relative;
+    z-index: 2;
+    margin-top: 0;
+    margin-bottom: 0;
+    display: flex;
+    flex-direction: column;
+    margin-bottom: 5.5rem;
+}
+
+.first {
+    margin-right: auto;
+}
+.second {
+    margin-left: auto;
+    padding-left: 2.75rem;
+}
+
+.box_for_buttons {
+    position: relative;
+    z-index: 3;
+}
+.button  {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-left: auto;
+    margin-right: auto;;
+    width: 16rem;
+    height: 2rem;
+    cursor: pointer;
+    text-align: center;
+    background-color: #5e42b0;
+    padding-top: 0.3rem;
+    padding-bottom: 0.3rem;
+    border: none;
+    border-radius: 1.125rem;
+}
+.button:nth-child(1) {
+    margin-bottom: 0.875rem;
+}
+
+.button_svg {
+    fill: #ffffff;
+    width: 20px;
+    height: 23px;
+    margin-right: 0.5rem;
+}
+.button_download {
+    display: block;
+    text-align: left;
+    font-family: OpenSans, Arial, sans-serif;
+    font-weight: 400;
+    color: #ffffff;
+    text-transform: uppercase;
+    font-size: 0.5rem;
+}
+.app_store, .google_play {
+    font-weight: 700;
+}
+
+/*Главный блок*/
+.main {
+    padding-top: 1.5rem;
+}
+
+.img_footballer {
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.box_img_footballer {
+ height: 225px;
+}
+
+.article_connection {
+    background-color: #fafafa;
+    padding-bottom: 3.375rem; 
+    padding-top: 5rem; 
+}
+
+.box_article {
+    padding-left: 1.25rem;
+    padding-right: 1.25rem;
+}
+.box_header {
+    margin-bottom: 1.75rem;
+    display: flex;
+}
+.box_number {
+    position: relative;
+    margin-right: 0.625rem;
+    padding-top: 2px;
+    padding-bottom: 5px;
+}
+
+.number {
+    font-family: OpenSans, Arial, sans-serif;
+    font-weight: 700;
+    text-transform: uppercase;
+    font-size: 0.875rem;
+    color: #000000;
+}
+.number::after {
+    content: "";
+    position: absolute;
+    width: 100%;
+    right: 0;
+    left: 0;
+    bottom: 5px;
+    border-top: 4px solid #5e42b0;
+}
+
+
+.header_section_athlets {
+    font-family: OpenSans, Arial, sans-serif;
+    font-weight: 700;
+    text-transform: uppercase;
+    margin: 0;   
+}
+.header_athlets {
+    font-size: 3.125rem;
+    color: #e7e7e7;
+    padding-left: 1.25rem;
+    padding-right: 1.25rem;
+}
+.header_connection {
+    font-size: 1.4rem;
+    color: #c5c5c5;
+}
+
+.content_basic {
+    font-family: OpenSans, Arial, sans-serif;
+    font-weight: 400;
+    font-size: 0.94rem;
+    color: #000000;
+}
+
+p {
+    margin:0;
+}
