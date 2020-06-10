@@ -10,6 +10,11 @@
     font-weight: 700;
     font-style: normal;
   }
+  
+body {
+    margin: 0;
+}
+
 .header {
   background-image: url("../images/football_767.jpg");
   background-repeat: no-repeat;
@@ -23,7 +28,6 @@
   padding-right: 1.25rem;
   height: 100vh;
   width: calc(100%-1.25rem);
-
 }
 .header::after {
     content: "";
@@ -52,8 +56,8 @@
     font-weight: 700;
     color: #ffffff;
     text-transform: uppercase;
-    font-size: 1.75rem;
-    line-height: 2.125rem;
+    font-size: calc(9.6875vw - 3px);
+    line-height: calc(9.6875vw - 3px);
     position: relative;
     z-index: 2;
     margin-top: 0;
@@ -61,26 +65,23 @@
     display: flex;
     flex-direction: column;
     margin-bottom: 5.5rem;
+    max-width: 1530px;
 }
 
-.first {
-    margin-right: auto;
-}
 .second {
-    margin-left: auto;
-    padding-left: 2.75rem;
+    align-self: flex-end;
+    width: 70vw;
 }
 
 .box_for_buttons {
     position: relative;
     z-index: 3;
 }
-.button  {
+.link_button  {
     display: flex;
     align-items: center;
-    justify-content: center;
     margin-left: auto;
-    margin-right: auto;;
+    margin-right: auto;
     width: 16rem;
     height: 2rem;
     cursor: pointer;
@@ -88,10 +89,9 @@
     background-color: #5e42b0;
     padding-top: 0.3rem;
     padding-bottom: 0.3rem;
-    border: none;
-    border-radius: 1.125rem;
+    border-radius: 2rem;
 }
-.button:nth-child(1) {
+.link_button:nth-child(1) {
     margin-bottom: 0.875rem;
 }
 
@@ -100,6 +100,7 @@
     width: 20px;
     height: 23px;
     margin-right: 0.5rem;
+    margin-left: 5rem;
 }
 .button_download {
     display: block;
@@ -114,18 +115,18 @@
     font-weight: 700;
 }
 
-/*Главный блок*/
+/* Главный блок */
 .main {
     padding-top: 1.5rem;
 }
 
-.img_footballer {
+.img_team_players {
     display: block;
     margin-left: auto;
     margin-right: auto;
 }
 
-.box_img_footballer {
+.box_img_team_players {
  height: 225px;
 }
 
@@ -135,7 +136,7 @@
     padding-top: 5rem; 
 }
 
-.box_article {
+.box_article {                  /* внутренние отступы для всего контента */
     padding-left: 1.25rem;
     padding-right: 1.25rem;
 }
@@ -167,22 +168,24 @@
     border-top: 4px solid #5e42b0;
 }
 
-
-.header_section_athlets {
+.header_athlets {
     font-family: OpenSans, Arial, sans-serif;
     font-weight: 700;
     text-transform: uppercase;
-    margin: 0;   
-}
-.header_athlets {
+    margin: 0;
     font-size: 3.125rem;
     color: #e7e7e7;
     padding-left: 1.25rem;
-    padding-right: 1.25rem;
+    padding-right: 1.25rem;    
 }
-.header_connection {
+
+.header_article {
+    font-family: OpenSans, Arial, sans-serif;
+    font-weight: 700;
+    text-transform: uppercase;
+    margin: 0;
     font-size: 1.4rem;
-    color: #c5c5c5;
+    color: #c1c1c1;
 }
 
 .content_basic {
@@ -195,3 +198,168 @@
 p {
     margin:0;
 }
+
+.article_collaboration {
+    background-color: #f5f4f9;
+    padding-bottom: 3.375rem; 
+    padding-top: 3.75rem; 
+}
+
+.article_growth {
+    background-color: #5e42b0;
+    padding-bottom: 3.375rem; 
+    padding-top: 3.75rem; 
+}
+
+.content_growth {
+    color: #f7f7fb;
+}
+.number_light_line::after {     /* переопределение подчеркивание у номера в сиреневом блоке */
+    border-color:#ffffff;
+}
+
+.article_growth_dark {          /* переопределение цвета фона */
+    background-color: #090c35; 
+}
+
+.number_for_the_dark {          /* переопределение цвета цифры 03 */
+    color: #5e42b0;
+}
+
+
+/* отдельные артиклы с прямоугольными фреймами изображений */
+.article_big {
+    padding-bottom: 4.75rem; 
+}
+
+.box_picture_number {
+    position: relative;
+}
+
+.picture {
+    max-width: 100%;
+}
+
+.box_number_square {
+    display: flex;
+    position: absolute;
+    width: 4.375rem;
+    height: 4.375rem;
+    background-color: #5e42b0;
+    bottom: -0.5rem;
+    left: 1rem;
+}
+.number_squared::after {            
+    content: "";
+    position: absolute;
+    width: 100%;
+    right: 0;
+    left: 0;
+    bottom: 0;
+    border-top: 4px solid #ffffff;
+    opacity: 0.3; 
+}
+
+.box_number_span {                 /* переопределение отступы: выравнивание по центру блока */
+    margin: auto; 
+} 
+
+.bright_number {                  /* переопределение цвет цифры 03 */
+    color: #f5f6f7;
+}
+
+.header_and_paragraf {
+    padding-top: 2rem;
+    padding-left: 1.25rem;
+    padding-right: 1.25rem;
+}
+
+.header_article_of_individual {    /* переопределение цвета и размера заголовка статьи */
+    font-size: 1.75rem;
+    color: #e7e7e7;
+}
+
+ /* оформление подвала */ 
+.footer {
+    background-image: url("../images/game_767.jpg");
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center center;
+    background-color: #000000;
+    position: relative;
+    padding-bottom: 0.625rem;
+    padding-top: 6.25rem;
+    padding-left: 1.25rem;
+    padding-right: 1.25rem;
+   
+    width: calc(100%-1.25rem);
+}
+.footer::after {
+    content: "";
+    background-color: #0a0e34;
+    opacity: 0.9;
+    position: absolute;
+    top: 0;
+    left: 0;
+    bottom: 0;
+    right: 0;  
+  }
+
+.link_surface {
+    position: relative;
+    z-index: 5;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-left: auto;
+    margin-right: auto;;
+    margin-bottom: 3.75rem;
+    cursor: pointer;
+    background-color: #5e42b0;
+    border-radius: 1rem;
+    width: 73px;
+    height: 73px;
+}
+.svg_link_surface {
+    fill: #ffffff;
+    width: 58px;
+  }
+
+  .footer_title {
+    position: relative;
+    z-index: 2;
+    text-align: center;
+    text-transform: uppercase;
+    max-width: 1530px;
+    margin-top: 0;
+    margin-bottom: 4.75rem;
+   
+  }
+  .h2_line_first {
+    font-family: OpenSans, Arial, sans-serif;
+    font-weight: 700;
+    color: #ffffff;
+    font-size: 2rem;
+    display: block;
+  }
+
+  .h2_line_second {
+    font-family: OpenSans, Arial, sans-serif;
+    font-weight: 400;
+    color: #9084b5;
+    font-size: 0.85rem;
+    display: block;
+  }
+
+  .box_links {
+      margin-bottom: 5rem;
+  }
+
+  .footer_logo {
+    margin-left: auto;
+    margin-right: auto;
+    position: relative;
+    z-index: 1;
+    width: 8.3rem;
+}
+ 
