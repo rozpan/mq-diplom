@@ -16,18 +16,18 @@ body {
 }
 
 .header {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
   background-image: url("../images/football_767.jpg");
   background-repeat: no-repeat;
   background-position: center center;
   background-size: cover;
   background-color: #000000;
   position: relative;
-  padding-bottom: 5.25rem;
-  padding-top: 2rem;
-  padding-left: 1.25rem;
+  padding-left: 1.25rem; 
   padding-right: 1.25rem;
   height: 100vh;
-  width: calc(100%-1.25rem);
 }
 .header::after {
     content: "";
@@ -45,7 +45,6 @@ body {
     position: relative;
     z-index: 1;
     width: 8.3rem;
-    margin-bottom: 8.5rem;
 }
 .logo_svg {
     fill: #ffffff;
@@ -64,7 +63,6 @@ body {
     margin-bottom: 0;
     display: flex;
     flex-direction: column;
-    margin-bottom: 5.5rem;
     max-width: 1530px;
 }
 
@@ -73,6 +71,7 @@ body {
     width: 70vw;
 }
 
+/* реализация кнопок-ссылок */
 .box_for_buttons {
     position: relative;
     z-index: 3;
@@ -82,14 +81,14 @@ body {
     align-items: center;
     margin-left: auto;
     margin-right: auto;
-    width: 16rem;
-    height: 2rem;
+    height: 35px;
+    max-width: 308px;
     cursor: pointer;
     text-align: center;
     background-color: #5e42b0;
     padding-top: 0.3rem;
     padding-bottom: 0.3rem;
-    border-radius: 2rem;
+    border-radius: 32px;
 }
 .link_button:nth-child(1) {
     margin-bottom: 0.875rem;
@@ -99,8 +98,8 @@ body {
     fill: #ffffff;
     width: 20px;
     height: 23px;
-    margin-right: 0.5rem;
-    margin-left: 5rem;
+    margin-right: 8px;
+    margin-left: 80px;
 }
 .button_download {
     display: block;
@@ -109,31 +108,31 @@ body {
     font-weight: 400;
     color: #ffffff;
     text-transform: uppercase;
-    font-size: 0.5rem;
+    font-size: 8px;;
 }
 .app_store, .google_play {
     font-weight: 700;
 }
 
+
 /* Главный блок */
 .main {
     padding-top: 1.5rem;
 }
-
 .img_team_players {
     display: block;
     margin-left: auto;
     margin-right: auto;
+    max-width: 100%;
 }
 
 .box_img_team_players {
- height: 225px;
+    height: 225px;
 }
-
 .article_connection {
     background-color: #fafafa;
-    padding-bottom: 3.375rem; 
-    padding-top: 5rem; 
+    padding-bottom: 54px; 
+    padding-top: 60px;
 }
 
 .box_article {                  /* внутренние отступы для всего контента */
@@ -167,13 +166,15 @@ body {
     bottom: 5px;
     border-top: 4px solid #5e42b0;
 }
-
+.header_athlets_inside {
+    display: none;
+}
 .header_athlets {
     font-family: OpenSans, Arial, sans-serif;
     font-weight: 700;
     text-transform: uppercase;
     margin: 0;
-    font-size: 3.125rem;
+    font-size: 50px;
     color: #e7e7e7;
     padding-left: 1.25rem;
     padding-right: 1.25rem;    
@@ -184,14 +185,14 @@ body {
     font-weight: 700;
     text-transform: uppercase;
     margin: 0;
-    font-size: 1.4rem;
+    font-size: 23px;
     color: #c1c1c1;
 }
 
 .content_basic {
     font-family: OpenSans, Arial, sans-serif;
     font-weight: 400;
-    font-size: 0.94rem;
+    font-size: 15px;
     color: #000000;
 }
 
@@ -201,14 +202,14 @@ p {
 
 .article_collaboration {
     background-color: #f5f4f9;
-    padding-bottom: 3.375rem; 
-    padding-top: 3.75rem; 
+    padding-bottom: 54px; 
+    padding-top: 60px; 
 }
 
 .article_growth {
     background-color: #5e42b0;
-    padding-bottom: 3.375rem; 
-    padding-top: 3.75rem; 
+    padding-bottom: 54px; 
+    padding-top: 60px; 
 }
 
 .content_growth {
@@ -247,7 +248,7 @@ p {
     height: 4.375rem;
     background-color: #5e42b0;
     bottom: -0.5rem;
-    left: 1rem;
+    left: 1.25rem;
 }
 .number_squared::after {            
     content: "";
@@ -264,19 +265,22 @@ p {
     margin: auto; 
 } 
 
-.bright_number {                  /* переопределение цвет цифры 03 */
+.bright_number {                   /* переопределение цвет цифры 03 */
     color: #f5f6f7;
 }
 
-.header_and_paragraf {
+.header_and_paragraf {              /* отступы для всего контента*/
     padding-top: 2rem;
     padding-left: 1.25rem;
     padding-right: 1.25rem;
 }
 
-.header_article_of_individual {    /* переопределение цвета и размера заголовка статьи */
-    font-size: 1.75rem;
+.header_article_of_individual {     /* переопределение цвета и размера заголовка статьи */
+    font-size: 28px;
     color: #e7e7e7;
+}
+.content_basic_big {                /* переопределение более крупного основного контента */
+    font-size: 16px;
 }
 
  /* оформление подвала */ 
@@ -287,13 +291,15 @@ p {
     background-position: center center;
     background-color: #000000;
     position: relative;
-    padding-bottom: 0.625rem;
-    padding-top: 6.25rem;
     padding-left: 1.25rem;
     padding-right: 1.25rem;
-   
     width: calc(100%-1.25rem);
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+    justify-content:space-around;
 }
+
 .footer::after {
     content: "";
     background-color: #0a0e34;
@@ -313,7 +319,6 @@ p {
     justify-content: center;
     margin-left: auto;
     margin-right: auto;;
-    margin-bottom: 3.75rem;
     cursor: pointer;
     background-color: #5e42b0;
     border-radius: 1rem;
@@ -332,14 +337,13 @@ p {
     text-transform: uppercase;
     max-width: 1530px;
     margin-top: 0;
-    margin-bottom: 4.75rem;
-   
+    font-size: calc(7.5vw + 8px);
   }
+
   .h2_line_first {
     font-family: OpenSans, Arial, sans-serif;
     font-weight: 700;
     color: #ffffff;
-    font-size: 2rem;
     display: block;
   }
 
@@ -347,12 +351,8 @@ p {
     font-family: OpenSans, Arial, sans-serif;
     font-weight: 400;
     color: #9084b5;
-    font-size: 0.85rem;
+    font-size: calc(2.5vw + 6px);
     display: block;
-  }
-
-  .box_links {
-      margin-bottom: 5rem;
   }
 
   .footer_logo {
@@ -363,3 +363,93 @@ p {
     width: 8.3rem;
 }
  
+
+@media (min-width: 641px) {
+    html {
+        font-size: 27px;
+    }
+    .box_for_buttons {
+        display: flex;
+        justify-content: center;
+    }
+    .link_button  {
+        justify-content: center;
+        box-sizing: border-box;
+        width: 50%;
+        height: 77px;
+        margin-left: 0;
+        margin-right: 0;
+        border-radius: 60px;
+    }
+    .link_button:nth-child(1) {
+        margin-bottom: 0;
+        margin-right: 25px;
+    }
+    .button_svg {
+        width: 37px;
+        height: 43px;
+        margin-left: 0;
+        margin-right: 25px;
+    }
+    .button_download {
+        font-size: 14px;
+    }
+    .header_athlets {
+        display: none;
+    }
+    .header_athlets_inside {
+        font-family: OpenSans, Arial, sans-serif;
+        font-weight: 700;
+        text-transform: uppercase;
+        margin: 0;
+        color: #e7e7e7;
+        padding-left: 1.25rem;
+        padding-right: 1.25rem;
+        font-size: 80px;
+        display: inline-block;
+    }
+   
+    .box_img_team_players {
+        float: right;
+        height: 65px;
+    }
+    .box_img_athlets{
+        float: left;
+        height: 65px;
+    }
+
+    .img_team_players {
+        padding-top: 35px;
+    }
+
+    .box_article {
+        display: inline-block;
+        width: 60%;
+    }
+    .box_article_athlets, .header_athlets_inside_right {
+        width: 60%;
+        margin-left: calc(40% - 1.25rem - 1.25rem);
+       
+    }
+    .header_article {
+        font-size: 32px;
+   }
+   .content_basic {
+       font-size: 16px;
+   }
+    .article_connection {
+        background-color: #ffffff;
+        padding-top: 45px;
+    }
+    .article_collaboration, .article_growth {
+        padding-bottom: 38px; 
+        padding-top: 35px;
+    }
+    .header_article_of_individual {     /* переопределение размера заголовка статьи */
+        font-size: 75px;
+    }
+    .content_basic_big {                /* переопределение более крупного основного контента */
+        font-size: 24px;
+    }
+    
+}
